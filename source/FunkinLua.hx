@@ -1784,6 +1784,27 @@ class FunkinLua {
 				object.makeGraphic(width, height, colorNum);
 			}
 		});
+		Lua_helper.add_callback(lua, "getAnimations", function(obj:String) {
+			var animations:Array<String> = [];
+			
+			if(PlayState.instance.getLuaObject(obj,false)!=null) {
+				var cock:FlxSprite = PlayState.instance.getLuaObject(obj,false);
+				@:privateAccess
+				for (anim in cock.animation._animations.keys()) {
+					animations.push(anim);
+				}
+				return animations;
+			}
+
+			var cock:FlxSprite = Reflect.getProperty(getInstance(), obj);
+			if (cock != null) {
+				@:privateAccess
+				for (anim in cock.animation._animations.keys()) {
+					animations.push(anim);
+				}
+			}
+			return animations;
+		});
 		Lua_helper.add_callback(lua, "addAnimationByPrefix", function(obj:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true) {
 			if(PlayState.instance.getLuaObject(obj,false)!=null) {
 				var cock:FlxSprite = PlayState.instance.getLuaObject(obj,false);

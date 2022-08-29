@@ -4696,7 +4696,7 @@ class PlayState extends MusicBeatState
 			if(!note.noAnimation) {
 				var curSection:Int = Math.floor(curStep / 16);
 				// Idk, will it work or not... Will think about it later.
-				if (curStep >= 0) if(SONG.notes[curSection].altAnim  && opponentChart') {/*bruh2*/} else note.animSuffix = '';
+				if (curStep >= 0) if(SONG.notes[curSection].altAnim  && opponentChart) {/*bruh2*/} else note.animSuffix = '';
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
 
 				var char:Character = boyfriend;

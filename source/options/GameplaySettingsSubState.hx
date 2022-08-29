@@ -73,6 +73,13 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+ 		var option:Option = new Option('Instant Respawn',
+			"If checked, you will respawn automatically,\nskipping game over animation.",
+			'instantRespawn',
+			'bool',
+			false);
+		addOption(option);
+
 		var option:Option = new Option('Disable Reset Button',
 			"If checked, pressing Reset won't do anything.",
 			'noReset',

@@ -47,6 +47,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool',
 			false);
 		addOption(option);
+
+		var option:Option = new Option('Showcase Mode', // from os engine
+			"If checked, hides entire HUD and enables botplay :D",
+			'showcaseMode',
+			'bool',
+			false);
+		addOption(option);
 		
 		var option:Option = new Option('Time Bar:',
 			"What should the Time Bar display?",
@@ -54,6 +61,14 @@ class VisualsUISubState extends BaseOptionsMenu
 			'string',
 			'Time Left',
 			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
+		addOption(option);
+
+		var option:Option = new Option('Icon Bounce:', // From Theoyeah-Engine
+			"How should your icons bounce?",
+			'iconBounce',
+			'string',
+			'Default',
+			['Default', 'Golden Apple', 'None']);
 		addOption(option);
 
 		var option:Option = new Option('Flashing Lights',

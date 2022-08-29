@@ -4576,6 +4576,7 @@ class PlayState extends MusicBeatState
 			if (opponentChart) char = dad;
 			if(char.hasMissAnimations) {
 				char.playAnim(singAnimations[Std.int(Math.abs(direction))] + 'miss', true);
+			}
 			vocals.volume = 0;
 		}
 		callOnLuas('noteMissPress', [direction]);

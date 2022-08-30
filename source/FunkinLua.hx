@@ -2381,6 +2381,12 @@ class FunkinLua {
 			#end
 		});
 
+		Lua_helper.add_callback(lua, "isNightMode", function() {
+			#if android
+			return Hardware.isMightMode();
+			#end
+		});
+
 		// LUA TEXTS
 		Lua_helper.add_callback(lua, "makeLuaText", function(tag:String, text:String, width:Int, x:Float, y:Float) {
 			tag = tag.replace('.', '');

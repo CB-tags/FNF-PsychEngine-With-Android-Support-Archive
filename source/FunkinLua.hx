@@ -2383,7 +2383,7 @@ class FunkinLua {
 
 		Lua_helper.add_callback(lua, "isNightMode", function() {
 			#if android
-			return Hardware.isMightMode();
+			return Hardware.isNightMode();
 			#end
 		});
 
